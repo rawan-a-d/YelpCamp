@@ -4,7 +4,7 @@ const app = express();
 app.set("view engine", "ejs")
 
 app.get("/", (req, res)=>{
-    res.render("landing");
+    res.render("landing", {title: "Home"});
 });
 
 app.get("/campgrounds", (req, res)=>{
@@ -13,7 +13,7 @@ app.get("/campgrounds", (req, res)=>{
         {name: "Live Oak Landing", image: "https://farm5.staticflickr.com/4083/4961648022_7fec214b35.jpg"},
         {name: "Myers Lake", image: "https://farm2.staticflickr.com/1424/1430198323_c26451b047.jpg"}
     ]
-    res.render("campgrounds", {campgrounds: campgrounds});
+    res.render("campgrounds", {campgrounds: campgrounds, title: "Campgrounds"});
 });
 
 app.listen(process.env.PORT, process.env.IP, ()=>{
