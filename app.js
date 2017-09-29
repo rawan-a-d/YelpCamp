@@ -1,11 +1,18 @@
 const express = require("express");
 const app = express();
-const bodyParser = require("body-parser")
+const bodyParser = require("body-parser");
 
 app.set("view engine", "ejs");
-app.use("/", bodyParser())
+app.use("/", bodyParser());
+app.use(express.static('public'));
 
 let campgrounds = [
+    {name: "Cherry Hill Park", image: "https://farm3.staticflickr.com/2464/3694344957_14180103ed.jpg"},
+    {name: "Live Oak Landing", image: "https://farm5.staticflickr.com/4083/4961648022_7fec214b35.jpg"},
+    {name: "Myers Lake", image: "https://farm2.staticflickr.com/1424/1430198323_c26451b047.jpg"},
+    {name: "Cherry Hill Park", image: "https://farm3.staticflickr.com/2464/3694344957_14180103ed.jpg"},
+    {name: "Live Oak Landing", image: "https://farm5.staticflickr.com/4083/4961648022_7fec214b35.jpg"},
+    {name: "Myers Lake", image: "https://farm2.staticflickr.com/1424/1430198323_c26451b047.jpg"},
     {name: "Cherry Hill Park", image: "https://farm3.staticflickr.com/2464/3694344957_14180103ed.jpg"},
     {name: "Live Oak Landing", image: "https://farm5.staticflickr.com/4083/4961648022_7fec214b35.jpg"},
     {name: "Myers Lake", image: "https://farm2.staticflickr.com/1424/1430198323_c26451b047.jpg"}
