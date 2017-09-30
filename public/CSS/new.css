@@ -1,0 +1,15 @@
+/* Form */
+#title {
+   text-align: center; 
+}
+
+.wrapper {
+    width: 40%;
+    margin: 35px auto;
+}
+
+.form-group > .btn {
+    background-color: #06633f;
+    color: #fff;
+    font-size: 1.3em;
+}
