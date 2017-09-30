@@ -3,8 +3,10 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.set("view engine", "ejs");
+app.set('views', __dirname + '/src/views');
+
 app.use("/", bodyParser());
-app.use(express.static('public'));
+app.use(express.static('src/public'));
 
 let campgrounds = [
     {name: "Cherry Hill Park", image: "https://farm3.staticflickr.com/2464/3694344957_14180103ed.jpg"},
